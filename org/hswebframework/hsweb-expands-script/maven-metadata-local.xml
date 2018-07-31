@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.hswebframework</groupId>
+  <artifactId>hsweb-expands-script</artifactId>
+  <versioning>
+    <versions>
+      <version>3.0.2-SNAPSHOT</version>
+      <version>3.0.3-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20180729131911</lastUpdated>
+  </versioning>
+</metadata>
