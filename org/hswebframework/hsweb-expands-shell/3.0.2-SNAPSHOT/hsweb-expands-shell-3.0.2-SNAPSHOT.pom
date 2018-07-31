@@ -36,7 +36,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>org.hswebframework.expands.shell.Shell</mainClass>
+                            <!--<mainClass>org.hswebframework.expands.shell.Shell</mainClass>-->
                         </manifest>
                     </archive>
                 </configuration>

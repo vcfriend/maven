@@ -20,7 +20,7 @@
 
 
     <name>${project.artifactId}</name>
-    <url>https://github.com/hs-web/hsweb-expands</url>
+    <url>https://github.com/vcfriend/hsweb-expands</url>
     <description>hsweb拓展工具集</description>
 
     <licenses>
@@ -32,24 +32,25 @@
 
     <developers>
         <developer>
-            <name>zhouhao</name>
-            <email>i@hsweb.me</email>
+            <name>vcfriend</name>
+            <email>vcfriend@qq.com</email>
             <roles>
                 <role>Owner</role>
             </roles>
             <timezone>+8</timezone>
-            <url>https://github.com/zhou-hao</url>
+            <url>https://github.com/vcfriend</url>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/hs-web/hsweb-expands.git</connection>
-        <developerConnection>scm:git:https://github.com/hs-web/hsweb-expands.git</developerConnection>
-        <url>https://github.com/hs-web/hsweb-expands</url>
+        <connection>scm:git:https://github.com/vcfriend/hsweb-expands.git</connection>
+        <developerConnection>scm:git:https://github.com/vcfriend/hsweb-expands.git</developerConnection>
+        <url>https://github.com/vcfriend/hsweb-expands</url>
         <tag>${project.version}</tag>
     </scm>
 
     <properties>
+        <github.global.server>github</github.global.server>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.locales>zh_CN</project.build.locales>
         <project.build.jdk>1.8</project.build.jdk>
@@ -90,7 +91,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.5</version>
+                        <version>RELEASE</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -104,7 +105,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.9.1</version>
+                        <version>3.0.0-M1</version>
                         <configuration>
                             <additionalparam>-Xdoclint:none</additionalparam>
                         </configuration>
@@ -254,38 +255,55 @@
         </dependencies>
     </dependencyManagement>
 
-    <repositories>
-        <repository>
-            <id>hsweb-nexus</id>
-            <name>Nexus Release Repository</name>
-            <url>http://nexus.hsweb.me/content/groups/public/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <name>Nexus Release Repository</name>
-            <url>http://nexus.hsweb.me/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Nexus Snapshot Repository</name>
-            <url>http://nexus.hsweb.me/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+  <repositories>
+    <repository>
+      <id>vcfriend-maven-snapshot-repository</id>
+      <name>vcfriend-maven-snapshot-repository</name>
+      <url>https://raw.github.com/vcfriend/maven/snapshot/</url>
+    </repository>
+    <repository>
+      <id>vcfriend-maven-release-repository</id>
+      <name>vcfriend-maven-release-repository</name>
+      <url>https://raw.github.com/vcfriends/maven/release/</url>
+    </repository>
+  </repositories>
+
+
+
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<id>hsweb-nexus</id>-->
+            <!--<name>Nexus Release Repository</name>-->
+            <!--<url>http://nexus.hsweb.me/content/groups/public/</url>-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+            <!--</snapshots>-->
+        <!--</repository>-->
+    <!--</repositories>-->
+
     <!--<distributionManagement>-->
         <!--<repository>-->
-            <!--<id>sonatype-releases</id>-->
-            <!--<name>sonatype repository</name>-->
-            <!--<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>-->
+            <!--<id>releases</id>-->
+            <!--<name>Nexus Release Repository</name>-->
+            <!--<url>http://nexus.hsweb.me/content/repositories/releases/</url>-->
         <!--</repository>-->
         <!--<snapshotRepository>-->
-            <!--<id>sonatype-snapshots</id>-->
+            <!--<id>snapshots</id>-->
             <!--<name>Nexus Snapshot Repository</name>-->
-            <!--<url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+            <!--<url>http://nexus.hsweb.me/content/repositories/snapshots/</url>-->
         <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
+
+    <!--<distributionManagement>-->
+    <!--<repository>-->
+    <!--<id>sonatype-releases</id>-->
+    <!--<name>sonatype repository</name>-->
+    <!--<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>-->
+    <!--</repository>-->
+    <!--<snapshotRepository>-->
+    <!--<id>sonatype-snapshots</id>-->
+    <!--<name>Nexus Snapshot Repository</name>-->
+    <!--<url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+    <!--</snapshotRepository>-->
     <!--</distributionManagement>-->
 </project>
